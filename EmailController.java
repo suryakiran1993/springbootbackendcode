@@ -28,10 +28,10 @@ public class EmailController
 		  MimeMessage mimeMessage = mailSender.createMimeMessage();
 		   MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
 		   
-		   int otp = (int)(Math.random() * 99999); // random number generation
+		   int otp = (int)(Math.random() * 99999); // random number generation code
 		   helper.setTo(mailDTO.getEmail());
 		   helper.setSubject(mailDTO.getSubject());
-		   helper.setFrom("suryakiranmtechcse@gmail.com");
+		   helper.setFrom("demo@gmail.com"); // mention sender email address here
 		   
 		   String htmlContent =
 		"<h3>Contact Form Details</h3>" +
