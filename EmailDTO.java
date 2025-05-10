@@ -6,7 +6,6 @@ public class EmailDTO {
     private String subject;
     private String message;
     private String email;
-    private String mobileno;
     private String location;
 
     public String getName() {
@@ -41,13 +40,7 @@ public class EmailDTO {
         this.email = email;
     }
 
-    public String getMobileNo() {
-        return mobileno;
-    }
-
-    public void setMobileNo(String mobileno) {
-        this.mobileno = mobileno;
-    }
+    
 
     public String getLocation() {
         return location;
@@ -60,6 +53,6 @@ public class EmailDTO {
     @Override
     public String toString() {
         return "EMailDTO [name=" + name + ", subject=" + subject + ", message=" + message + ", email=" + email
-                + ", mobileno=" + mobileno + ", location=" + location + "]";
+                + ", location=" + location + "]";
     }
 }

@@ -25,13 +25,15 @@ public class EmailController
 	{
 	  try 
 	  {
+		  System.out.println(mailDTO.toString());
+		  
 		  MimeMessage mimeMessage = mailSender.createMimeMessage();
 		   MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
 		   
-		   int otp = (int)(Math.random() * 99999); // random number generation code
+		   int otp = (int)(Math.random() * 99999); // random number generation
 		   helper.setTo(mailDTO.getEmail());
 		   helper.setSubject(mailDTO.getSubject());
-		   helper.setFrom("demo@gmail.com"); // mention sender email address here
+		   helper.setFrom("suryakiranmtechcse@gmail.com");
 		   
 		   String htmlContent =
 		"<h3>Contact Form Details</h3>" +
@@ -39,7 +41,6 @@ public class EmailController
 		"<p><strong>Email:</strong> " + mailDTO.getEmail() + "</p>" +
 		"<p><strong>Subject:</strong> " + mailDTO.getSubject() + "</p>" +
 		"<p><strong>Message:</strong> " + mailDTO.getMessage() + "</p>" +
-		"<p><strong>Mobile No:</strong> " + mailDTO.getMobileNo() + "</p>" +
 		"<p><strong>Location:</strong> " + mailDTO.getLocation() + "</p>" +
 		"<p><strong>OTP:</strong> " + otp + "</p>";
 		
