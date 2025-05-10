@@ -33,7 +33,7 @@ public class EmailController
 		   int otp = (int)(Math.random() * 99999); // random number generation
 		   helper.setTo(mailDTO.getEmail());
 		   helper.setSubject(mailDTO.getSubject());
-		   helper.setFrom("suryakiranmtechcse@gmail.com");
+		   helper.setFrom("sender mail id"); // eg: demo@gmail.com (which you given in application.properties
 		   
 		   String htmlContent =
 		"<h3>Contact Form Details</h3>" +
